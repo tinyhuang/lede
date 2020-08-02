@@ -10,11 +10,7 @@
 name: OpenWrt-CI
 
 on:
-  schedule:
-    - cron: 16 * * * *
-  push:
-    tags:
-      - '*'
+  workflow_dispatch:
 
 jobs:
 
