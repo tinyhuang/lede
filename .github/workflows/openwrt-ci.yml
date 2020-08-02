@@ -10,14 +10,11 @@
 name: OpenWrt-CI
 
 on:
-  repository_dispatch:
-  release:
-    types: published
+  schedule:
+    - cron: 16 * * * *
   push:
-    branches:
-      - main
-    paths:
-      - '.config'
+    tags:
+      - '*'
 
 jobs:
 
